@@ -1,0 +1,51 @@
+{% extends "wishes/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="nameVote">Editar nombre de la votación</label>
+            <input type="text" name="nameVote" value="{{ vote.nameVote }}" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Editar descripción</label>
+            <textarea class="form-control" id="description" name="description" required>{{ vote.description }}</textarea>
+        </div>
+        <label for="imageVote"><strong>Selecciona una nueva imagen:</strong></label>
+        <input type="file" class="form-control-file" name="imageVote">
+
+        <button type="submit">Guardar cambios</button>
+        <div class="form-group" id="vote-options">
+            <label for="option"><strong>Opciones de voto:</strong></label>
+            {% for option in vote.options.all %}
+                <div class="option-group">
+                    <input type="text" name="option_text[]" value="{{ option.option_text }}" placeholder="Nombre de la opción" />
+                    <textarea class="form-control" name="description_vote" placeholder="Descripción de la opción del voto">{{ option.description_vote }}</textarea>
+                    <label for="image_description"><strong>Selecciona una imagen:</strong></label>
+                    <input type="file" class="form-control-file" name="image_description" />
+                    {% if option.image_description %}
+                        <img style="width: 20rem;" src="{{ option.image_description.url }}" alt="image_description">
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <button type="button" id="add-option-btn" class="btn btn-secondary">+ opciones</button>
+        <button type="submit" class="btn btn-dark">Guardar cambios</button>
+    </form>
+    
+    <script>
+        document.getElementById("add-option-btn").addEventListener("click", function () {
+            var voteOptions = document.getElementById("vote-options");
+            var newOption = document.createElement("div");
+            newOption.className = "option-group";
+            newOption.innerHTML =
+                '<input type="text" name="option_text[]" placeholder="Nombre de la opción" />' +
+                '<textarea class="form-control" name="description_vote" placeholder="Descripción de la opción del voto"></textarea>' +
+                '<label for="image_description"><strong>Selecciona una imagen:</strong></label>' +
+                '<input type="file" class="form-control-file" name="image_description" />';
+            voteOptions.appendChild(newOption);
+        });
+    </script>
+{% endblock %}

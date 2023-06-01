@@ -1,0 +1,26 @@
+{% extends "wishes/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <h1>{{ vote.nameVote }}</h1>
+
+    <h3>Resultados:</h3>
+
+    {% for option_text, option_votes in option_percentages %}
+        <p>{{ option_text }}: {{ option_votes }} voto{% if option_votes != 1 %}s{% endif %}</p>
+    {% endfor %}
+
+    {% if option_percentages %}
+        <h3>Voto(s) más votado(s):</h3>
+        {% with option_percentages|first as most_voted %}
+            {% for option_text, option_votes in option_percentages %}
+                {% if option_votes == most_voted.1 %}
+                    <p>{{ option_text }} es una de las opciones más votadas con {{ option_votes }} voto{% if option_votes != 1 %}s{% endif %}</p>
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+    {% else %}
+        <p>No hay votaciones disponibles.</p>
+    {% endif %}
+
+{% endblock %}
