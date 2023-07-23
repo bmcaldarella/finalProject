@@ -1,0 +1,834 @@
+body {
+  margin: 0;
+  height: 90vh;
+  background-size: cover;
+  background-color: #FF0000;
+
+}
+
+
+
+/*main page*/
+.nav{
+  position: fixed;
+}
+.check{
+  color: #fff ;
+  font-size: 25px;
+}
+/**/
+
+.logo{
+ width: 10px;
+
+ margin-top: 250px;
+}
+#banner {
+  background: linear-gradient(135deg, #ff9f00, #ff3d00);
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.hd-little-title {
+  font-size: 18px;
+}
+
+.hd-big-title {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+#subtitle {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+hr {
+  margin: 20px auto;
+  opacity: 0%;
+  border: none;
+  border-top: 1px solid white;
+  transition: opacity 0.5s ease;
+}
+
+
+
+
+
+
+
+/*Cards*/
+.cs-img {
+  width: 250px;
+  text-align: center;
+  margin-top: -35px;
+}
+
+.cs-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cs-text{
+  font-family:system-ui;
+  display: block;
+  font-size: 20px;
+  border: #282936;
+  text-align: center;
+}
+
+
+
+.container-logo{
+  width: 200px;
+}
+.logo{
+  width: 40vh;
+  position: relative;
+  top: -410px;
+}
+
+/*Image-banner*/
+.pt-banner {
+  position: relative;
+  margin: 0 auto;
+  left:35px ;
+  top: -250px;
+  width: 750px;
+  
+}
+
+.pt-banner-picture {
+
+  border-radius: 25px;
+  width: 600px;
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.5); ;
+
+
+}
+
+
+.hd-little-title {
+  position: relative;
+  animation-name: moveLeftRight;
+  animation-duration: 3s;
+  animation-iteration-count:1;
+  animation-direction: alternate;
+}
+
+@keyframes moveLeftRight {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 50px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/*botonesss*/
+
+
+.btn-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  background-color: rgb(53,58,63);
+  color: #fff;
+}
+
+svg {
+  margin: 0 0 0 10px;
+}
+
+.btn-register:hover svg {
+  margin: 0 0 0 25px;
+  transition: 0.3s;
+}
+
+.btn-register:not(:hover) svg {
+  transition: 0.3s;
+}
+
+.btn-register:active {
+  transform: scale(0.9, 0.9);
+  transition: 200ms;
+}
+
+.btn-register:not(:active) {
+  transition: 200ms;
+}
+/*Finbotonesss*/
+
+
+
+.section-info{
+margin-top: -80px;
+  display: flex;
+   height: 100vh;
+   justify-content: center;   
+}
+
+
+
+
+
+
+
+/*mas info*/
+.container {
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top:20px;
+  background-color: rgb(255, 255, 255);
+  
+}
+
+.container .card {
+  position: relative;
+  min-width: 200px;
+  width: 320px;
+  height: 380px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: -10px;
+  transition: 0.5s;
+  background-color: rgb(255, 170, 0);
+  width: 280px;
+}
+
+
+
+.container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background:rgb(53, 58,63);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container .card .box:hover {
+  transform: translateY(-50px);
+}
+
+.container .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.container .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+.container .card .box .content .heading {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.container .card .box .content .content {
+  font-size: 1.8rem;
+  color: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 15px;
+}
+
+.container .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+
+
+/**/
+
+.mr-more-info{
+  padding: 150px;   
+  
+  }
+    
+    .mr-more-tittle{
+      
+      text-align: center;
+     
+      font-size: 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .mr-title{
+      text-align: center;
+      font-size: 50px; 
+      color:rgb(226, 139, 52);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    }
+  
+  
+  
+  
+
+    .button {
+      height: 50px;
+      width: 200px;
+      position: relative;
+      background-color: transparent;
+      cursor: pointer;
+      border: 2px solid #252525;
+      overflow: hidden;
+      border-radius: 30px;
+      color: #333;
+      transition: all 0.5s ease-in-out;
+    }
+    
+    .btn-txt {
+      z-index: 1;
+      font-weight: 800;
+      letter-spacing: 4px;
+    }
+    
+    .type1::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: all 0.5s ease-in-out;
+      background-color: #333;
+      border-radius: 30px;
+      visibility: hidden;
+      height: 10px;
+      width: 10px;
+      z-index: -1;
+    }
+    
+    .button:hover {
+      box-shadow: 1px 1px 200px #252525;
+      color: #fff;
+      border: none;
+    }
+    
+    .type1:hover::after {
+      visibility: visible;
+      transform: scale(100) translateX(2px);
+    }
+
+.ft-Register{
+position: relative;
+text-align: center;
+bottom:280px;
+
+}
+
+.ft-account{
+  font-size: 40px;
+  margin-bottom: 10px;
+
+}
+
+/* Media queries*************************** */
+@media (min-width: 1350px) {
+  body{
+    margin: 0;
+    height: 110vh;
+    background-size: cover;
+
+
+  }
+.carrusel {
+  background-color: rgb(53,58,63);
+  max-width: 1700px;
+  width: 100%;
+  position: relative;
+  top:0;
+  
+}
+
+
+/* Animación de escritura */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Animación del cursor intermitente */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+}
+div.item {
+  position: absolute;
+  width: 700px;
+  height: 400px;
+  
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+  z-index: calc((var(--position) - var(--abs)));
+}
+.container-logo{
+  width: 200px;
+}
+
+.pt-banner {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  top: -683px;
+  left: 670px;
+  
+}
+
+.pt-banner-picture {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+.section-info{
+  margin-top: 3px;
+    display: flex;
+     height: 100vh;
+     justify-content: center;   
+  }
+  
+  
+  
+  
+  
+  
+  
+  /*mas info*/
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+ 
+    background-color: rgb(255, 255, 255);
+   
+  }
+  
+  .container .card {
+    position: relative;
+    min-width: 220px;
+    height: 380px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-top: -240px;
+    
+    transition: 0.5s;
+  }
+  
+  
+  
+  .container .card .box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background:rgb(53, 58,63);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .container .card .box:hover {
+    transform: translateY(-50px);
+  }
+  
+  .container .card .box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.03);
+  }
+  
+  .container .card .box .content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container .card .box .content .heading {
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .container .card .box .content .content {
+    font-size: 1.8rem;
+    color: #fff;
+    z-index: 1;
+    transition: 0.5s;
+    margin-bottom: 15px;
+  }
+  
+  .container .card .box .content p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  
+  
+  /**/
+
+  .mr-more-info{
+padding-top: 100px;   
+
+}
+  
+  .mr-more-tittle{
+    text-align: center;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .mr-title{
+    text-align: center;
+    font-size: 50px; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  }
+
+}
+
+
+
+  .section-info{
+    margin-top: -100px;
+      display: flex;
+       height: 100vh;
+       justify-content: center;   
+    }
+    
+    .ft-Register{
+      margin-top: 60px;
+    }
+    .ft-btn-register{
+      color: inherit;
+    text-decoration: none;
+}
+    
+@keyframes moveLeftRight {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 50px;
+  }
+  100% {
+    left: 0;
+  }
+
+  
+}
+
+
+
+@media (max-width: 805px) {
+
+  
+
+.carrusel {
+  background-color: rgb(53,58,63);
+  max-width: 730px;
+  width: 100%;
+  position: relative;
+  top:0;
+  
+}
+.section-info{
+  margin-top: 10px;
+    display: block;
+     height: 100vh;
+     justify-content: center;   
+  }
+  
+  
+  
+  /*mas info*/
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    background-color: rgb(255, 255, 255);
+   
+  }
+  
+  .container .card {
+    position: relative;
+    min-width: 220px;
+    height: 380px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: -10px;
+    transition: 0.5s;
+    margin-top: 50px;
+  }
+  
+  
+  
+  .container .card .box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background:rgb(53, 58,63);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .container .card .box:hover {
+    transform: translateY(-50px);
+  }
+  
+  .container .card .box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.03);
+  }
+  
+  .container .card .box .content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container .card .box .content .heading {
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .container .card .box .content .content {
+    font-size: 1.8rem;
+    color: #fff;
+    z-index: 1;
+    transition: 0.5s;
+    margin-bottom: 15px;
+  }
+  
+  .container .card .box .content p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  
+  
+  /**/
+  .mr-more-info{
+    padding: 90px;   
+    
+    }
+      
+      .mr-more-tittle{
+        
+        text-align: center;
+       
+        font-size: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .mr-title{
+        text-align: center;
+        font-size: 50px; 
+        color:rgb(226, 139, 52);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      
+      }
+  
+
+/* Animación de escritura */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+
+  
+}
+
+/* Animación del cursor intermitente */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+}
+div.item {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+  z-index: calc((var(--position) - var(--abs)));
+}
+.container-logo{
+  width: 200px;
+}
+.logo{
+  width: 40vh;
+  position: relative;
+  top: -450px;
+}
+
+.pt-banner {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  top: -243px;
+  left: -20px;
+ 
+  
+}
+
+.pt-banner-picture {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.ft-Register{
+  position: relative;
+  text-align: center;
+  top:540px;
+  
+  }
+  
+  .ft-account{
+    font-size: 40px;
+    margin-bottom: 10px;
+  
+  
+
+}
+.ft-btn-register{
+  color: inherit;
+text-decoration: none;
+}
+
+
+.section-info{
+  margin-top: -120px;
+   
+     height: 100vh;
+     justify-content: center;   
+  }
+  
+@keyframes moveLeftRight {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 50px;
+  }
+  100% {
+    left: 0;
+  }
+
+
+}
+
+
+}
+
+
+
+.item {
+  position: absolute;
+  background-color: transparent;
+  width: calc(var(--i) * 2.5vmin);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: .9vmin solid rgb(0, 200, 255);
+  transform-style: preserve-3d;
+  transform: rotateX(70deg) translateZ(50px);
+  animation: my-move 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+  box-shadow: 0px 0px 15px rgb(124, 124, 124),
+    inset 0px 0px 15px rgb(124, 124, 124);
+}
+
+@keyframes my-move {
+  0%,
+  100% {
+    transform: rotateX(70deg) translateZ(50px) translateY(0px);
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+    filter: hue-rotate(180deg);
+  }
+}
+

@@ -1,0 +1,33 @@
+{% extends "wishes/layout.html" %}
+{% load static %}
+
+{% block body %}
+  <h1>Encuestas en las que he participasdo:</h1>
+  {% for option in user_options %}
+    <h5>Nombre de la votación: {{ option.vote.nameVote }}</h5>
+    <p>Votó por: {{ option.option_text }}</p>
+    
+    {% if option.vote.closed %}
+      <p>La encuesta está cerrada</p>
+    {% else %}
+      {% if option.vote.more_votes %}
+        <h6>Resultados hasta el momento:</h6>
+        {% for vote_option, count in option.vote.more_votes %}
+          <div class="card" style="width: 40rem; position: relative; top: 0; left: 25%; margin-top: 20px;">
+            <div class="card-body">
+              {% if vote_option.image_description %}
+                <img style="width: 20rem;" src="{{ vote_option.image_description.url }}" alt="image_description">
+              {% else %}
+                No image available.
+              {% endif %}
+              <h3>{{ vote_option.option_text }}</h3>
+              <p>Votos: {{ count }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      {% else %}
+     
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endblock %}

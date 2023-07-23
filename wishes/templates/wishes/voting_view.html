@@ -1,0 +1,22 @@
+{% extends "wishes/layout.html" %}
+{% load static %}
+{% block body %}
+{% if selected_option %}
+    <h2>Opción seleccionada :</h2>
+    <p><strong>{{ selected_option.option_text }}</strong></p>
+    <p>{{ selected_option.description_vote }}</p>
+    {% if selected_option.image_description %}
+        <img src="{{ selected_option.image_description.url }}" alt="Imagen de descripción">
+    {% endif %}
+    <h1>Resultados de la votacion hasta ahora:</h1>
+    <h3>resultados -------</h3>
+    
+    <p>{{ selected_option.option_text }}: {{ selected_option.chosen_by.count }}</p>
+    
+{% else %}
+    <p>No se ha seleccionado ninguna opción.</p>
+{% endif %}
+
+
+
+{% endblock %}

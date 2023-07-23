@@ -1,0 +1,64 @@
+{% extends "wishes/layout.html" %}
+
+{% load static %}
+{% block body %}
+    <div class="cn-form">
+        {% if message %}
+           {{ message }}
+        {% endif %}
+    <div class="form-container">
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+
+      
+            <h5 class="rt-title">Fill to register </h5>
+            <hr>
+            <div class="form-group">
+                <input id="form1" class="form-control" autofocus type="text" name="username" placeholder="Username" required >
+            </div>
+            <div class="form-group">
+                <input  id="form2" class="form-control" type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+                <input  id="form3" class="form-control" type="password" name="password" placeholder="Password" required>
+                <i id="togglePassword-register-1" class="far fa-eye"></i>
+
+            </div>
+            <div class="form-group-cp">
+                <input  id="form4" class="form-control" type="password" name="confirmation" placeholder="Confirm Password" required>
+                <i id="togglePassword-register-2" class="far fa-eye"></i>
+
+            </div>
+
+            
+            <button class="button-register" type="submit">
+                Register
+            </button>
+
+        </form>
+
+        <span class="rt-title1"> Already have an account?</span>  <a href="{% url 'login' %}">Log In here.</a>
+        <br>
+    </div>
+
+    <script>
+        const togglePasswordRegister1 = document.getElementById("togglePassword-register-1");
+        const togglePasswordRegister2 = document.getElementById("togglePassword-register-2");
+        const passwordInput1 = document.getElementById("form3");
+        const passwordInput2 = document.getElementById("form4");
+
+        togglePasswordRegister1.addEventListener("click", function() {
+            const type = passwordInput1.getAttribute("type") === "password" ? "text" : "password";
+            passwordInput1.setAttribute("type", type);
+
+            togglePasswordRegister1.classList.toggle("fa-eye-slash");
+        });
+
+        togglePasswordRegister2.addEventListener("click", function() {
+            const type = passwordInput2.getAttribute("type") === "password" ? "text" : "password";
+            passwordInput2.setAttribute("type", type);
+
+            togglePasswordRegister2.classList.toggle("fa-eye-slash");
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,185 @@
+.menu-icon{
+  width: 50px;
+}
+.menu-icon:hover{
+  background-color: rgba(0, 0, 0, 0.057);
+  border-radius: 50%;
+
+
+}
+.menu{
+  width: 300px;
+  cursor: pointer;
+  margin-bottom: 30px;
+
+}
+.manu-items{
+  position: relative;
+  right:120px;
+}
+.container-votes{
+  margin: 100px;
+}
+.result-img{
+  width: 300px;
+  border-radius: 30px;
+}
+.exp-mv{
+  font-size: 50px;
+  text-align: center;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.vote-option {
+  margin-top: 50px;
+  display: inline-block;
+  margin: 30px;
+  text-align: center;
+  vertical-align: top;
+  max-width: 270px;
+  background-color: rgba(137, 43, 226, 0.08);
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.196);
+}
+
+.list-vote {
+  text-align: center;
+  margin-top: 70px;
+
+}
+
+.result-img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.number-vote{
+  font-size: 20px;
+}
+.number-vote-rs{
+  font-size: 30px;
+}
+
+.winner{
+  width: 24px;
+  height: 24px;
+}
+
+.cotillon {
+  position: absolute;
+  top: -210px; 
+  left: 50%;
+  bottom: 100%; 
+  transform: translateX(-50%);
+  animation: caer 20s linear infinite; 
+}
+
+@keyframes caer {
+  0% {
+    transform: translate(-50%, -100%); 
+    opacity: 1; 
+  }
+  50% {
+    transform: translate(-50%, 0); 
+    opacity: 1; 
+  }
+  100% {
+    transform: translate(-50%, 100%); 
+    opacity: 0; 
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .list-vote {
+    text-align: center;
+    margin-top: -20px;
+  
+  }
+  .vote-option {
+    margin-top: 222px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    max-width: 200px;
+    background-color: rgba(137, 43, 226, 0.08);
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.196);
+  }
+  .result-img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+
+  .list-vote {
+    margin-top: -80px;
+    text-align: center;
+  
+  
+  }
+  .menu{
+    width: 300px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  
+  }
+  
+
+}
+
+
+
+@media screen and (max-width: 734px) {
+  .cn-form {
+    padding: 500px;
+    width: 500vw;
+    height:500vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1455' height='1295' preserveAspectRatio='none' viewBox='0 0 1455 1295'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1510%26quot%3b)' fill='none'%3e%3cpath d='M168 1295L1463 0L2472.5 0L1177.5 1295z' fill='url(%26quot%3b%23SvgjsLinearGradient1511%26quot%3b)'%3e%3c/path%3e%3cpath d='M1446 1295L151 0L-747.5 0L547.5 1295z' fill='url(%26quot%3b%23SvgjsLinearGradient1512%26quot%3b)'%3e%3c/path%3e%3cpath d='M313.2622560858838 1295L1455 153.2622560858838L1455 1295z' fill='url(%26quot%3b%23SvgjsLinearGradient1511%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 1295L1141.7377439141162 1295L 0 153.2622560858838z' fill='url(%26quot%3b%23SvgjsLinearGradient1512%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1510'%3e%3crect width='1455' height='1295' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1511'%3e%3cstop stop-color='rgba(18%2c 12%2c 177%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(18%2c 12%2c 177%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1512'%3e%3cstop stop-color='rgba(18%2c 12%2c 177%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(18%2c 12%2c 177%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    animation: moveBackground 10s linear infinite;
+}
+
+
+  .vote-option {
+    margin-top:85px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    max-width: 160px;
+    background-color: rgba(131, 43, 226, 0.08);
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.196);
+  }
+
+  .list-vote {
+    margin-top: -100px;
+    text-align: center;
+    padding: -90px;
+    background-size: cover;
+
+
+  
+  }
+  .menu{
+    width: 300px;
+    cursor: pointer;
+    margin-bottom: 100px;
+  
+  }
+  .exp-mv{
+    position: relative;
+    top:-60px;
+
+  }
+
+}

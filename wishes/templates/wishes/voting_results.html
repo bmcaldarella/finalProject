@@ -1,0 +1,76 @@
+{% extends "wishes/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="sidebar">
+    <div class="bd-user-container"></div>
+    <div class="pf-menu">
+      <ul>
+        
+          <li class="pf-li">
+            <a  href="{% url 'new_survey' user_id=user.id %}">
+  
+              <svg class="new-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
+              </svg>
+            </a>
+              <a class="name-menu" href="{% url 'new_survey' user_id=user.id %}">
+                  
+              New Survey</a>
+      
+          </li>
+          <li class="pf-li">
+            <a  href="{% url 'vote' %}">
+    
+            <?xml version="1.0" ?><svg  class="fp-file" enable-background="new 0 0 64 64" id="Layer_1" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M56.7949219,5H7.2050781C3.7836914,5,1,7.7836914,1,11.2050781v33.5898438C1,48.2167969,3.7836914,51,7.2050781,51H14   c1.1044922,0,2-0.8955078,2-2s-0.8955078-2-2-2H7.2050781C5.9892578,47,5,46.0107422,5,44.7949219V11.2050781   C5,9.9892578,5.9892578,9,7.2050781,9h49.5898438C58.0107422,9,59,9.9892578,59,11.2050781v33.5898438   C59,46.0107422,58.0107422,47,56.7949219,47H21c-1.1044922,0-2,0.8955078-2,2s0.8955078,2,2,2h35.7949219   C60.2163086,51,63,48.2167969,63,44.7949219V11.2050781C63,7.7836914,60.2163086,5,56.7949219,5z"/><path d="M43.4946289,26.6831055l-5.375,6.1430664L27.6000977,18.7998047   c-0.3618164-0.4824219-0.9223633-0.7758789-1.5249023-0.7983398c-0.6030273-0.0268555-1.1831055,0.2280273-1.5805664,0.6816406   L18.0922852,26H13c-1.1044922,0-2,0.8955078-2,2s0.8955078,2,2,2h6c0.5766602,0,1.1254883-0.2490234,1.5053711-0.6831055   l5.375-6.1430664l10.5195313,14.0263672c0.3618164,0.4824219,0.9223633,0.7753906,1.5249023,0.7988281   C37.949707,38,37.9750977,38,38,38c0.5756836,0,1.1245117-0.2480469,1.5053711-0.6826172L45.9077148,30H51   c1.1044922,0,2-0.8955078,2-2s-0.8955078-2-2-2h-6C44.4233398,26,43.8745117,26.2490234,43.4946289,26.6831055z"/><path d="M51,17c1.1044922,0,2-0.8955078,2-2s-0.8955078-2-2-2h-3c-1.1044922,0-2,0.8955078-2,2s0.8955078,2,2,2H51z"/><path d="M58,55H6c-1.1044922,0-2,0.8955078-2,2s0.8955078,2,2,2h52c1.1044922,0,2-0.8955078,2-2S59.1044922,55,58,55z"/></g></svg>
+          </a>
+            <a class="name-menu" href="{% url 'vote' %}">Dashboard</a>
+          </li>
+          <li class="pf-li">
+            <a href="{% url 'inprogress' %}">
+              <svg class="fp-file" fill="#000000" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.cls-1{fill:none;}</style></defs><title>in-progress</title><path d="M16,2A14,14,0,1,0,30,16,14.0158,14.0158,0,0,0,16,2Zm0,26A12,12,0,0,1,16,4V16l8.4812,8.4814A11.9625,11.9625,0,0,1,16,28Z"></path><rect id="_Transparent_Rectangle_" data-name="<Transparent Rectangle>" class="cls-1" width="32" height="32"></rect></g></svg>
+              <a class="name-menu" href="{% url 'inprogress' %}">In progress</a>
+    
+            </a>
+    
+          </li>
+  
+          <li class="pf-li">
+            <a  href="{% url 'my_choose' %}">
+    
+            <svg class="fp-file" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+            </svg>
+          </a>
+            <a class="name-menu" href="{% url 'my_choose' %}">Your participation</a>
+          </li>
+    
+      </ul>
+
+<div class="full-container-results">
+  <div class="title-name">
+    <h3 class="result-vote" >Results so far</h3>
+    <h3 class="name-survey">Survey: <strong>{{ vote.nameVote }}</strong></h3>
+  </div>
+  <div class="item-circle">
+    {% for option_text, option_votes in option_percentages %}
+    <div class="container-counter">
+        <div class="counter-votes">
+      
+            <span class="text-votes"><strong>{{ option_text }}</strong></span>
+            <br>
+            <span class="number"><strong>{{ option_votes }}</strong></span>
+            <span class="vote"> vote{% if option_votes != 1 %}s{% endif %}</span>
+        </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</div>
+
+
+</div>
+</div>
+
+{% endblock %}

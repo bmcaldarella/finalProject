@@ -1,0 +1,84 @@
+{% extends "wishes/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="card-body">
+    
+    <svg class="wave" id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 400" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(228.486, 213.887, 255, 1)" offset="0%"></stop><stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,0L24,60C48,120,96,240,144,246.7C192,253,240,147,288,140C336,133,384,227,432,226.7C480,227,528,133,576,133.3C624,133,672,227,720,246.7C768,267,816,213,864,186.7C912,160,960,160,1008,153.3C1056,147,1104,133,1152,113.3C1200,93,1248,67,1296,80C1344,93,1392,147,1440,140C1488,133,1536,67,1584,73.3C1632,80,1680,160,1728,213.3C1776,267,1824,293,1872,313.3C1920,333,1968,347,2016,326.7C2064,307,2112,253,2160,200C2208,147,2256,93,2304,93.3C2352,93,2400,147,2448,146.7C2496,147,2544,93,2592,100C2640,107,2688,173,2736,220C2784,267,2832,293,2880,293.3C2928,293,2976,267,3024,273.3C3072,280,3120,320,3168,313.3C3216,307,3264,253,3312,206.7C3360,160,3408,120,3432,100L3456,80L3456,400L3432,400C3408,400,3360,400,3312,400C3264,400,3216,400,3168,400C3120,400,3072,400,3024,400C2976,400,2928,400,2880,400C2832,400,2784,400,2736,400C2688,400,2640,400,2592,400C2544,400,2496,400,2448,400C2400,400,2352,400,2304,400C2256,400,2208,400,2160,400C2112,400,2064,400,2016,400C1968,400,1920,400,1872,400C1824,400,1776,400,1728,400C1680,400,1632,400,1584,400C1536,400,1488,400,1440,400C1392,400,1344,400,1296,400C1248,400,1200,400,1152,400C1104,400,1056,400,1008,400C960,400,912,400,864,400C816,400,768,400,720,400C672,400,624,400,576,400C528,400,480,400,432,400C384,400,336,400,288,400C240,400,192,400,144,400C96,400,48,400,24,400L0,400Z"></path><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(166.561, 87.042, 134.333, 0)" offset="0%"></stop><stop stop-color="rgba(130.707, 11, 255, 0.16)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,120L24,133.3C48,147,96,173,144,153.3C192,133,240,67,288,53.3C336,40,384,80,432,140C480,200,528,280,576,273.3C624,267,672,173,720,120C768,67,816,53,864,66.7C912,80,960,120,1008,153.3C1056,187,1104,213,1152,206.7C1200,200,1248,160,1296,180C1344,200,1392,280,1440,300C1488,320,1536,280,1584,220C1632,160,1680,80,1728,53.3C1776,27,1824,53,1872,100C1920,147,1968,213,2016,220C2064,227,2112,173,2160,126.7C2208,80,2256,40,2304,60C2352,80,2400,160,2448,220C2496,280,2544,320,2592,280C2640,240,2688,120,2736,106.7C2784,93,2832,187,2880,200C2928,213,2976,147,3024,133.3C3072,120,3120,160,3168,186.7C3216,213,3264,227,3312,240C3360,253,3408,267,3432,273.3L3456,280L3456,400L3432,400C3408,400,3360,400,3312,400C3264,400,3216,400,3168,400C3120,400,3072,400,3024,400C2976,400,2928,400,2880,400C2832,400,2784,400,2736,400C2688,400,2640,400,2592,400C2544,400,2496,400,2448,400C2400,400,2352,400,2304,400C2256,400,2208,400,2160,400C2112,400,2064,400,2016,400C1968,400,1920,400,1872,400C1824,400,1776,400,1728,400C1680,400,1632,400,1584,400C1536,400,1488,400,1440,400C1392,400,1344,400,1296,400C1248,400,1200,400,1152,400C1104,400,1056,400,1008,400C960,400,912,400,864,400C816,400,768,400,720,400C672,400,624,400,576,400C528,400,480,400,432,400C384,400,336,400,288,400C240,400,192,400,144,400C96,400,48,400,24,400L0,400Z"></path></svg>       <!-- Código del SVG omitido por brevedad -->
+  </svg>
+  <div class="warning-container">
+
+  <div class="warning" style="display: none;"><svg class="warning-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon style="fill:#fff71a;" points="0,477.703 256,477.703 289.391,256 256,34.297 "></polygon> <polygon style="fill:#fff81f;" points="256,34.297 256,477.703 512,477.703 "></polygon> <g> <circle style="fill:#324860;" cx="256" cy="405.359" r="16.696"></circle> <rect x="239.304" y="177.185" style="fill:#324860;" width="33.391" height="178.087"></rect> </g> </g></svg>Please select an option before submitting.</div>
+  <svg class="warning-close"xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+  
+</div>
+  {% if vote.imageVote %}
+  <img class="img-card-vote" src="{{ vote.imageVote.url }}" alt="imageVote">
+  {% else %}
+  {% endif %}
+
+
+<div class="contain">
+  <div class="list-vote-1">
+    <h3 class="name-vote-card"><strong>{{ vote.nameVote }}</strong></h3>
+    <span class="vote-description-card">{{ vote.description }}</span>
+    <form method="post" action="{% url 'voting_view' vote.id %}">
+      {% csrf_token %}
+      {% for option in vote.options.all %}
+      <div class="options-vote">
+        <ul>
+          <li class="list-group">
+            <input type="radio" name="selected_option" value="{{ option.id }}">
+            <strong  class="name-option-vt" >{{ option.option_text }}</strong> 
+
+            <label>
+              {% if option.image_description %}
+              <img class="result-img-ds" src="{{ option.image_description.url }}" alt="image_description">
+              {% endif %}
+              <div class="description-card">
+                <br>{{ option.description_vote }}<br>
+              </div>
+            </label>
+          </li>
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="btn-option-ds">
+      <button class="btn-option-save btn btn-dark" type="submit">Submit</button>
+    </form>
+    <button type="button" class="btn btn-dark" onclick="window.location.href='{% url 'inprogress' %}'">Back</button>
+  </div>
+</div>
+</div>
+<script>
+    const options = document.querySelectorAll('.list-group');
+    options.forEach((option) => {
+      option.addEventListener('click', () => {
+        const input = option.querySelector('input[type="radio"]');
+        input.checked = true;
+      });
+    });
+    const warning = document.querySelector(".warning");
+    const close = document.querySelector(".warning-close");
+    close.addEventListener('click', () => {
+      warning.style.display = 'none'; // 
+      close.style.display='none';
+
+    });
+
+    document.querySelector('.btn-option-save').addEventListener('click', function(event) {
+      const selectedOption = document.querySelector('input[type="radio"]:checked');
+      if (!selectedOption) {
+        event.preventDefault(); // Detener el envío del formulario
+        warning.style.display = 'block'; // Mostrar la advertencia
+        close.style.display='block';
+      }
+    });
+    
+          
+  </script>
+  
+{% endblock %}

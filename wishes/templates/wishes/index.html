@@ -1,0 +1,270 @@
+{% extends "wishes/layout.html" %}
+
+{% load static %}
+
+{% block body %}
+
+
+
+<div id="banner">
+
+
+  <span class="hd-little-title">Secure online voting</span>
+  <h3 class="hd-big-title">All decisions that matter</h3>
+  <span id="subtitle">Empower decision-making in a safe and easy way.</span>
+  <img class="logo"src="media/logo.png" alt="logo">
+
+  <hr style="opacity: 0%;">
+
+</div>
+
+
+
+<div class="carrusel">
+
+  <input class="radio"type="radio" name="position" checked />
+  <input class="radio"type="radio" name="position" />
+  <input class="radio"type="radio" name="position" />
+  <input class="radio"type="radio" name="position" />
+  <input class="radio"type="radio" name="position" />
+  <main id="carousel">
+    <div class="item">
+      <div class="cs-img-container" >
+        <img class="cs-img"  src="media/fast.png" alt="fast">
+      </div>
+      <span class="cs-text">
+        Intuitive interface:<br>   The application has a user-friendly and easy-to-navigate interface,
+         allowing users to quickly access voting functionalities without complications.
+        </span>
+
+    </div>
+    <div class="item">
+    
+        <div class="cs-img-container">
+          <img  class="cs-img"  src="media/security.png" alt="security">
+        </div>
+        <div>
+        <span class="cs-text">
+          Data protection:<br> Voting data is securely stored and the best practices 
+          are followed to protect voter information.
+         </span>
+      </div>
+    </div>
+    <div class="item">
+      <div class="cs-img-container">
+        <img class="cs-img" src="media/eficacy.png" alt="eficacy">
+      </div>
+      <div class="cs-text">
+        <span class="cs-text">
+          Remote access: <br> Users can access the voting application from anywhere and at any time,
+           eliminating the need for physical travel and simplifying participation in the electoral process.
+
+        </span>
+      </div>
+    </div>
+
+  </main>
+</div>
+<div id="mr-more-info"class="mr-more-info">
+  <span class="mr-more-tittle">Our advantages</span>
+  <h2 class="mr-title">Free of cost, effort, and more agility of choice</h2>
+  <p class="mr-more-tittle">
+    Organizing voting events with physical ballot boxes or by postal mail requires a significant investment of time and money.
+     Ivote technology enables you to organize more agile voting without compromising security. Whether it's a remote, in-person, or hybrid vote,
+     our online voting technology generates immediate and auditable results.
+    </p>
+  </div>
+  
+<section class="section-info">
+
+  <div class="container">
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <span class="heading">01</span>
+          <span class="content">Register</span>
+
+          <p>Sign up and create a survey.</p>
+        </div>
+      </div>
+    </div></div>
+
+    <div class="container">
+      <div class="card">
+        <div class="box">
+          <div class="content">
+            <span class="heading">02</span>
+            <span class="content">Statistics</span>
+
+            <p>Look at how the voting is going</p>
+          </div>
+        </div>
+      </div></div>
+
+      <div class="container">
+        <div class="card">
+          <div class="box">
+            <div class="content">
+              <span class="heading">03</span>
+              <span class="content">Winner </span>
+              <p>Publish the most voted option</p>
+            </div>
+          </div>
+        </div></div>
+        
+</section>
+<section class="ft-Register">
+
+  <h3 class="ft-account">Create an Account here</h3>
+  <button class="button type1">
+    <a class="ft-btn-register" href="{% url 'register' %}">
+    <span class="btn-txt">register</span>
+  </a>
+  </button>
+</section>
+
+<script>
+  // Espera a que la página se haya cargado completamente
+window.addEventListener("load", function () {
+  // Obtiene el elemento del título
+  const titleElement = document.querySelector(".hd-big-title");
+
+  // Obtiene el texto del título
+  const titleText = titleElement.textContent;
+
+  // Limpia el texto existente en el elemento
+  titleElement.textContent = "";
+
+  // Variable para almacenar el índice del carácter actual
+  let charIndex = 0;
+
+  // Función para mostrar los caracteres uno por uno
+  function type() {
+    // Agrega el siguiente carácter al título
+    titleElement.textContent += titleText.charAt(charIndex);
+
+    // Incrementa el índice del carácter actual
+    charIndex++;
+
+    // Comprueba si se han mostrado todos los caracteres
+    if (charIndex < titleText.length) {
+      // Si no se han mostrado todos los caracteres, programa la siguiente llamada
+      setTimeout(type, 0.1); // Ajusta el tiempo de espera entre caracteres
+    }
+  }
+
+  // Inicia la animación de escritura
+  type();
+});
+
+
+// Espera a que el contenido de la página se haya cargado completamente
+document.addEventListener("DOMContentLoaded", function () {
+  // Obtiene los elementos de los títulos
+  const littleTitleElement = document.querySelector(".hd-little-title");
+  const subtitleElement = document.querySelector("#subtitle");
+
+  // Muestra gradualmente los títulos
+  littleTitleElement.style.opacity = 1;
+  subtitleElement.style.opacity = 1;
+});
+
+
+
+ // Espera a que la página se haya cargado completamente
+ window.addEventListener("load", function() {
+  // Obtiene el contenedor del carrusel
+  const carousel = document.getElementById("carousel");
+
+  // Obtiene todas las radios del carrusel
+  const radios = document.getElementsByName("position");
+
+  // Variable para almacenar el índice de la posición actual
+  let currentPosition = 0;
+
+  // Función para cambiar a la siguiente posición del carrusel
+  function nextSlide() {
+    // Incrementa el índice de la posición actual
+    currentPosition++;
+
+    // Verifica si se ha alcanzado el final del carrusel
+    if (currentPosition >= radios.length) {
+      currentPosition = 0; // Vuelve al primer elemento
+    }
+
+    // Cambia la posición del carrusel
+    radios[currentPosition].checked = true;
+  }
+
+  // Intervalo de tiempo para cambiar automáticamente las posiciones (3 segundos en este ejemplo)
+  setInterval(nextSlide, 3000);
+});
+
+
+
+// Espera a que se cargue completamente la página
+window.addEventListener("load", function() {
+  // Función para verificar la posición de desplazamiento y mostrar el carrusel si es necesario
+  function showCarousel() {
+    // Obtiene la posición de desplazamiento vertical
+    var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Verifica si se ha alcanzado la posición de desplazamiento deseada (por ejemplo, 500 píxeles desde la parte superior de la página)
+    if (scrollPosition >= 100) {
+      // Muestra el carrusel cambiando la propiedad de estilo display a "block"
+      document.querySelector(".carrusel").style.display = "block";
+    }
+  }
+
+  // Agrega un evento de desplazamiento para llamar a la función showCarousel cuando se desplaza la página
+  window.addEventListener("scroll", showCarousel);
+});
+
+
+
+
+
+
+
+  // Espera a que la página se haya cargado completamente
+  window.addEventListener("load", function() {
+    // Obtiene todas las imágenes de la clase 'pt-banner-picture'
+    const images = document.querySelectorAll(".pt-banner-picture");
+    
+    // Oculta todas las imágenes excepto la primera
+    for (let i = 1; i < images.length; i++) {
+      images[i].style.display = "none";
+    }
+    
+    // Variable para almacenar el índice de la imagen actual
+    let currentImageIndex = 0;
+    
+    // Función para mostrar la siguiente imagen
+    function showNextImage() {
+      // Oculta la imagen actual
+      images[currentImageIndex].style.display = "none";
+      
+      // Incrementa el índice de la imagen actual
+      currentImageIndex++;
+      
+      // Verifica si se ha alcanzado el final de la lista de imágenes
+      if (currentImageIndex >= images.length) {
+        currentImageIndex = 0; // Vuelve al primer elemento
+      }
+      
+      // Muestra la siguiente imagen
+      images[currentImageIndex].style.display = "block";
+    }
+    
+    // Intervalo de tiempo para cambiar automáticamente las imágenes (2 segundos en este ejemplo)
+    setInterval(showNextImage, 5000);
+  });
+
+
+
+
+  
+
+</script>
+
+{% endblock %}
