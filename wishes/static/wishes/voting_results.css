@@ -1,0 +1,199 @@
+.full-imgback{
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 6px;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1455' height='1295' preserveAspectRatio='none' viewBox='0 0 1455 1295'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1510%26quot%3b)' fill='none'%3e%3cpath d='M168 1295L1463 0L2472.5 0L1177.5 1295z' fill='url(%26quot%3b%23SvgjsLinearGradient1511%26quot%3b)'%3e%3c/path%3e%3cpath d='M1446 1295L151 0L-747.5 0L547.5 1295z' fill='url(%26quot%3b%23SvgjsLinearGradient1512%26quot%3b)'%3e%3c/path%3e%3cpath d='M313.2622560858838 1295L1455 153.2622560858838L1455 1295z' fill='url(%26quot%3b%23SvgjsLinearGradient1511%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 1295L1141.7377439141162 1295L 0 153.2622560858838z' fill='url(%26quot%3b%23SvgjsLinearGradient1512%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1510'%3e%3crect width='1455' height='1295' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1511'%3e%3cstop stop-color='rgba(18%2c 12%2c 177%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(18%2c 12%2c 177%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1512'%3e%3cstop stop-color='rgba(18%2c 12%2c 177%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(18%2c 12%2c 177%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+}
+
+.full-container-results{
+position: relative;
+top:-180px;
+left: 250px;
+  
+}
+.name-survey{
+  font-size: 20px;
+  position: relative;
+  left: 30px;
+}
+.title-name{
+  display: flexbox;
+  position: relative;
+  left: -110px;
+  width: 300px;
+}
+.result-vote{
+  margin-top: -100px;
+font-size: 40px;
+position: relative;
+left: 10%;
+}
+.item-circle{
+  display:flexbox;
+  width: 280px;
+  position: relative;
+  left: -100px;
+  
+}
+.counter-votes{
+  position: relative;
+  left: 25px;
+  background-color: rgba(184, 172, 239, 0.842);
+  padding: 5px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.291);
+}
+.text-votes{
+  font-size: 25px;
+}
+.number{
+  font-size: 30px;
+}
+@media (min-width: 791px ){
+.full-container-results{
+position: relative;
+top:-270px;
+left: 530px;
+  
+}
+.result-vote{
+  font-size: 50px;
+  width: 400px;
+}
+
+.counter-votes{
+  position: relative;
+  left: 25px;
+  background-color: rgba(184, 172, 239, 0.842);
+  padding: 5px;
+  margin-top: 40px;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.291);
+}
+
+
+}
+@media (min-width: 1291px ){
+  .full-container-results{
+    position: relative;
+    top:-270px;
+    left: 550px;
+  }
+  .result-vote{
+    font-size: 60px;
+    width: 600px;
+    text-align: center;
+  }
+  .counter-votes{
+    position: relative;
+    left: 10px;
+    width: 600px;
+    background-color: rgba(184, 172, 239, 0.842);
+    padding: 5px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.291);
+  }
+  .container-counter{
+    display: flexbox;
+  }
+  .name-survey{
+    width: 600px;
+  }
+  
+  .title-name{
+    text-align: center;
+  }
+  .number{
+    font-size: 40px;
+  }
+  
+}
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #2f2ee9;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg,#fff);
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+/* close button shown when typing */
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
