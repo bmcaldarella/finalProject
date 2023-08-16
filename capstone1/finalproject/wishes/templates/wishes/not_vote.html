@@ -1,0 +1,49 @@
+{% extends "wishes/layout.html" %}
+{% load static %}
+{% block body %}
+<div class="nav-fixed">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{% url 'inprogress' %}">Ivote</a>
+    
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'inprogress' %}">In progress <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Options
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item"  href="{% url 'profile' user_id=user.id %}">Profile</a>
+              <a class="dropdown-item"  href="{% url 'new_survey' user_id=user.id %}">Create new survey</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item"  href="{% url 'vote' %}">Dashboard</a>
+            </div>
+          </li>
+        </ul>
+    </nav>
+    
+  </div>
+
+
+
+<img class="not-vote-img" src="/media/not_vote.png" alt="notvote">
+<div class="text-not-vote">
+<h1 class="not-vote-title">You have already participated in this vote!</h1>
+<span class="lt-vote-title">You can only vote once</span>
+<!-- En tu archivo de plantilla de Django -->
+<a href="{% url 'inprogress' %}">
+
+<button class="btn-not-vote"  >
+ Go back
+</button>
+</a>
+</div>
+
+
+{% endblock %}

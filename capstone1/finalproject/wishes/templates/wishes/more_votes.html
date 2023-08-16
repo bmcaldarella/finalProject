@@ -1,0 +1,98 @@
+{% extends "wishes/layout.html" %}
+{% load static %}
+
+{% block body %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand"  href="{% url 'inprogress' %}">Ivote</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href={% url "inprogress"%}>Inprogress <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Options
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item"  href="{% url 'profile' user_id=user.id %}">Profile</a>
+          <a class="dropdown-item"  href="{% url 'new_survey' user_id=user.id %}">Create new survey</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item"  href="{% url 'vote' %}">Dashboard</a>
+        </div>
+      </li>
+    </ul>
+</nav>
+
+
+
+
+      <h1 class="exp-mv"> Results</h1>
+      {% if more_votes %}
+
+      <div class="cotillon-container" id="cotillon-img">
+        <img src="/media/cotillon.png" alt="Cotillón" class="cotillon" id="cotillon-img">
+      </div>
+
+      {% with max_votes=0 max_option=null %}
+        {% for vote_option in more_votes %}
+          {% if vote_option.count > max_votes %}
+            {% with max_votes=vote_option.count max_option=vote_option %}
+            {% endwith %}
+          {% endif %}
+        {% endfor %}
+      {% endwith %}
+    
+      {% if max_option %}
+        <div class="winner-option">
+          {% if max_option.image_description %}
+            <img class="winner-img" src="{{ max_option.image_description.url }}" alt="image_description">
+          {% endif %}
+          <h2 class="vote-option-name">{{ max_option.option_text }}</h2>
+          {% if max_option == top_vote_option %}
+            <p class="vote-option-count winner-count">
+              <span class="number-vote">Votes: <strong class="number-vote-rs">{{ max_option.count }}</strong></span>
+            </p>
+          {% else %}
+            <p class="vote-option-count">
+              <span class="number-vote">Votes: <strong class="number-vote-rs">{{ max_option.count }}</strong></span>
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+    
+      <div class="list-vote">
+        {% for vote_option in more_votes %}
+          {% if vote_option != max_option %} 
+            <div class="vote-option{% if vote_option == max_option %} winner{% endif %}">
+              {% if vote_option.image_description %}
+                <img class="result-img" src="{{ vote_option.image_description.url }}" alt="image_description">
+              {% endif %}
+              <span class="number-vote">Votes: <strong class="number-vote-rs">{{ vote_option.count }}</strong></span>
+
+              <h2 class="vote-option-name">{{ vote_option.option_text }}</h2>
+              <p class="vote-option-count{% if vote_option == max_option and max_votes != 0 %}{% endif %}">
+              </p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const cotillonImg = document.getElementById("cotillon-img");
+
+    cotillonImg.addEventListener("animationend", function() {
+      cotillonImg.style.display = "none"; // Oculta el cotillón después de la animación
+    });
+  });
+</script>
+
+
+{% endblock %}

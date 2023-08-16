@@ -1,0 +1,118 @@
+{% extends "wishes/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="nav-fixed-edit">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="">Ivote</a>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'new_survey' user_id=user.id %}">  + Create a new Survey <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Options
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item"  href="{% url 'profile' user_id=user.id %}">Profile</a>
+            <a class="dropdown-item"  href="{% url 'new_survey' user_id=user.id %}">Create new survey</a>
+            <a class="dropdown-item"  href="{% url 'vote' %}">Dashboard</a>
+
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item"  href="{% url 'logout' %}">Log out</a>
+
+          </div>
+        </li>
+      </ul>
+  </nav>
+  </div>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="full-container-edit">
+        <h1>Edit Survey</h1>
+        <div class="survey-name-edit">
+            <label for="nameVote"></label>
+            <input class="form-control" placeholder="survey name (Edit)" type="text" name="nameVote" style="width:450px;height:50px ; border-radius: 15px;" value="{{ vote.nameVote }}" required>
+        </div>
+        <label for="description"></label>
+        <textarea class="form-control" placeholder="survey Description (Edit)" style="border-radius: 15px; height: 100px;" class="form-control" id="description" name="description" required>{{ vote.description }}</textarea>
+
+        <label for="imageVote"><strong>Select a new image </strong>(optional*):</label>
+        <input type="file" class="form-control-file" name="imageVote">
+
+        <div class="form-group" id="vote-options">
+            <label class="name-options" for="option"><strong>Options</strong></label>
+
+            {% for option in vote.options.all %}
+            <div class="option-group">
+                <input type="text" class="form-control" style="width: 300px;margin-bottom:20px ; border-radius: 15px;" name="option_text[]" value="{{ option.option_text }}" placeholder="Nombre de la opción" />
+                <textarea class="form-control" style="border-radius: 15px; height: 100px;" name="description_vote" placeholder="Descripción de la opción del voto">{{ option.description_vote }}</textarea>
+                {% if option.image_description %}
+                <img class="img-options" src="{{ option.image_description.url }}" alt="image_description">
+                {% endif %}
+                <label class="sl-nw-image" for="image_description"><strong >Select a new image</strong>(Optional *)</label>
+                <input class="file-img" type="file" class="form-control-file" name="image_description" />
+
+                <button type="button" id="btn-remove"class="btn btn-danger btn-sm" onclick="removeOption(this)">Remove option</button>
+                <hr>
+            </div>
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-dark">Guardar cambios</button>
+        <button id="add-option-btn-edit" class="btn btn-secondary">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg> Options
+            </span>
+        </button>
+    </div>
+</form>
+
+<script>
+    document.getElementById("add-option-btn-edit").addEventListener("click", function (event) {
+        event.preventDefault();
+
+        var voteOptions = document.getElementById("vote-options");
+        var newOption = document.createElement("div");
+        newOption.className = "option-group";
+        newOption.innerHTML =
+            '<input type="text" name="option_text[]" placeholder="Nombre de la opción"  class="form-control" style="width: 300px;margin-top:20px;margin-bottom:20px; border-radius: 15px;"  />' +
+            '<textarea class="form-control" name="description_vote" placeholder="Descripción de la opción del voto"></textarea  class="form-control" style="border-radius: 15px; height: 100px;">' +
+            '<label for="image_description"><strong>Selecciona una imagen:</strong></label>' +
+            '<input type="file" class="form-control-file" name="image_description" />' +
+            '<button type="button" class="btn btn-danger btn-sm" style="margin-top:30px";onclick="removeOption(this)">Eliminar opción</button>';
+        voteOptions.appendChild(newOption);
+    });
+
+    function removeOption(button) {
+        var optionGroup = button.parentNode;
+        optionGroup.parentNode.removeChild(optionGroup);
+    }
+
+    var menu = document.getElementById("menu-icon-1");
+    var items = document.querySelectorAll(".manu-items");
+    var isMenuOpen = false;
+    
+    menu.addEventListener("click", function() {
+      if (isMenuOpen) {
+        items.forEach(function(item) {
+          item.style.display = "none";
+        });
+      } else {
+        items.forEach(function(item) {
+          item.style.display = "block";
+        });
+      }
+    
+      isMenuOpen = !isMenuOpen;
+    });
+
+</script>
+
+{% endblock %}
